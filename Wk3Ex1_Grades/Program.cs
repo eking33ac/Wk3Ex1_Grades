@@ -37,10 +37,10 @@ namespace Wk3Ex1_Grades
             // while it continues to be not in range, return to the statement to prompt the user to input the number grade
             while (!(numberGrade >= 0 && numberGrade <= 100));
 
-
+            // convert the number grade to the nearest whole number, ensuring 89.5 is a 90 and 89.4 is an 89
             roundedGrade = Math.Round(numberGrade);
             
-            // if statement to ensure grades which start with a 1 or single digit grades don't get misplaced (i.e. 19 != 100 and 8 != 80 in their results)
+            // if statement to ensure grades which start with a 1 or single digit grades don't get misplaced (i.e. results for 19 != 100 and results for 8 != 80)
             // check if roundedGrade is < 20
             if (roundedGrade < 20) {
                 // if true, convert roundedGrade to 0
@@ -56,9 +56,9 @@ namespace Wk3Ex1_Grades
             {
                 // run this case if numberGrade = 1
                 case '1':
-                    // Output the near-value we got the letter grade from upon conversion 
+                    // Output the near-value we got the letter grade from upon conversion
                     Console.WriteLine("100");
-                    // Output the original number and what it's letter grade is 
+                    // Output the original number and what it's letter grade is
                     Console.WriteLine($"The letter grade for score {numberGrade} is: A");
                     // Jump out of switch here
                     break;
